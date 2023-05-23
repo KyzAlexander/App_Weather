@@ -1,0 +1,22 @@
+
+$light-title-header: #f7dd4c;
+
+$light-text-color: #000;
+
+//----------------
+$body-background-light: #6cd9ff;
+$body-background-dark: #0D1117;
+
+$components-background-light: #ffffff;
+$components-background-dark: #4F4F4F;
+
+
+:root {
+  --body-background-dark: #{$body-background-dark};
+  --body-background-light: #{$body-background-light};
+  --body-background-default: var(#{--body-background-light});
+
+  --components-background-dark: #{$components-background-dark};
+  --components-background-light: #{$components-background-light};
+  --components-background-default: var(#{--components-background-light});
+}
