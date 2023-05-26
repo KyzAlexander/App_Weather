@@ -1,11 +1,11 @@
 import Header from "./components/Header/Header";
-import ThisDay from "./components/ThisDay/ThisDay";
+import InfoDay from "./components/InfoDay/InfoDay";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <ThisDay />
+      <InfoDay />
     </div>
   );
 }

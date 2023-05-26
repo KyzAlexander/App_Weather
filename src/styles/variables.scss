@@ -10,6 +10,9 @@ $body-background-dark: #0D1117;
 $components-background-light: #ffffff;
 $components-background-dark: #4F4F4F;
 
+$components-main-text-light:#0D1117;
+$components-main-text-dark:#ffffff;
+
 
 :root {
   --body-background-dark: #{$body-background-dark};
@@ -19,4 +22,8 @@ $components-background-dark: #4F4F4F;
   --components-background-dark: #{$components-background-dark};
   --components-background-light: #{$components-background-light};
   --components-background-default: var(#{--components-background-light});
+
+  --components-main-text-dark: #{$components-main-text-dark};
+  --components-main-text-light: #{$components-main-text-light};
+  --components-main-text-default: var(#{--components-main-text-light});
 }

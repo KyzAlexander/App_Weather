@@ -5,7 +5,6 @@ import { changeCssRootVariables } from "../model/ChangeCssRootVariables";
 
 export const ThemeProvider = ({ children, ...props }) => {
   const [theme, setTheme] = useState(storage.getItem("theme") || "light");
-  console.log(storage.getItem("theme"));
   changeCssRootVariables(theme);
   const changeTheme = (theme) => {
     storage.setItem("theme", theme);
