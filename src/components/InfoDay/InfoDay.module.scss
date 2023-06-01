@@ -7,4 +7,34 @@
   align-items: center;
   margin-top: 10px;
 }
+.hourlyForecastWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  &__title {
+    font-size: 25px;
+    color: var(#{--components-main-text-default});
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+  }  
+}
+.wrapperloadingTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  &__title {
+    font-size: 30px;
+    color: var(#{--components-main-text-default});
+    margin: 0;  
+  }
+}
+
 

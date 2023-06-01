@@ -1,5 +1,4 @@
 import { Logo } from "../../assets/svg/logo";
-// import { HiMoon, HiSun } from "react-icons/hi";
 import { TbSunMoon } from "react-icons/tb";
 import style from "./Header.module.scss";
 import { useTheme } from "../../hooks/useTheme";
@@ -13,7 +12,7 @@ const Header = () => {
     theme.changeTheme(theme.theme === "light" ? "dark" : "light");
   };
 
-  const [valueInput, setValueInput] = useState("minsk");
+  const [valueInput, setValueInput] = useState("");
 
   const dispatch = useDispatch();
   const onSearch = () => {

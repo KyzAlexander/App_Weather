@@ -1,9 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  lat: 0,
-  lon: 0,
-  city: "",
+  weather_3_hour: [],
   isLoading: false,
   response: {
     status: 0,
@@ -11,24 +9,22 @@ const initialState = {
   },
 };
 
-export const currentCitySlice = createSlice({
-  name: "current_city",
+export const nextWeatherSlice = createSlice({
+  name: "next_weather",
   initialState,
   reducers: {
-    fetchCurrentCity(state) {
-      state.isLoading = true;
+    fetchNextWeather(state) {
+      state.isLoading = true; // мутируем значение state
     },
-    fetchCurrentCitySuccess(state, action) {
-      state.lat = action.payload.data[0].lat;
-      state.lon = action.payload.data[0].lon;
-      state.city = action.payload.data[0].local_names.ru;
-      state.isLoading = true;
+    fetchNextWeatherSuccess(state, action) {
+      state.weather_3_hour = action.payload.data.list;
+      state.isLoading = false;
       state.response = {
         status: action.payload.status,
         massage: action.payload.statuseText,
       };
     },
-    fetchCurrentCityError(state, action) {
+    fetchNextWeatherError(state, action) {
       state.isLoading = false;
       state.response = {
         status: action.payload.status,
@@ -38,4 +34,4 @@ export const currentCitySlice = createSlice({
   },
 });
 
-export default currentCitySlice.reducer;
+export default nextWeatherSlice.reducer;

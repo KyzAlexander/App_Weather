@@ -1081,7 +1081,7 @@ export const SvgSelector = ({ id }) => {
           />
           <mask
             id="mask0_2_276"
-            style="mask-type:alpha"
+            // style="mask-type:alpha"
             maskUnits="userSpaceOnUse"
             x="185"
             y="81"
@@ -2224,7 +2224,6 @@ export const SvgSelector = ({ id }) => {
           </g>
           <mask
             id="mask0_2_456"
-            style="mask-type:alpha"
             maskUnits="userSpaceOnUse"
             x="185"
             y="120"
