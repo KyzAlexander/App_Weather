@@ -5,7 +5,7 @@ export const SvgSpeed = () => {
       version="1.1"
       id="westeastwind"
       viewBox="0 0 199.6146 200"
-      enable-background="new 0 0 199.6146 200"
+      enableBackground="new 0 0 199.6146 200"
       width="35"
       height="35"
     >

@@ -46,7 +46,7 @@ const DetailsDay = ({ weather }) => {
       {data.map((item) => {
         return (
           <div className={style.wrapperItem} key={item.title}>
-            <div className={style.detailsDay__img}>{item.icon}</div>
+            <div className={style.detailsDay__icon}>{item.icon}</div>
             <div className={style.wrapperText}>
               <p className={style.detailsDay__title}>{item.title}</p>
               <p className={style.detailsDay__description}>

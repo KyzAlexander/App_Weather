@@ -5,7 +5,7 @@ export const SvgTemp = () => {
       version="1.1"
       id="celsius"
       viewBox="0 0 204 220"
-      enable-background="new 0 0 204 220"
+      enableBackground="new 0 0 204 220"
       width="35"
       height="35"
     >

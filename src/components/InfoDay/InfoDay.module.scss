@@ -6,6 +6,11 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 10px;
+  @media (max-width: $screen-768){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
 }
 .hourlyForecastWrapper {
   display: flex;
@@ -15,7 +20,10 @@
   &__title {
     font-size: 25px;
     color: var(#{--components-main-text-default});
-  }
+    @media (max-width: $screen-768){
+      font-size: 20px;
+    }
+  }  
   &__wrapper {
     display: flex;
     flex-direction: row;
@@ -23,6 +31,9 @@
     align-items: center;
     max-width: 900px;
     width: 100%;
+    @media (max-width: $screen-768){
+      flex-wrap: wrap;
+    }
   }  
 }
 .wrapperloadingTitle {
@@ -33,7 +44,13 @@
   &__title {
     font-size: 30px;
     color: var(#{--components-main-text-default});
-    margin: 0;  
+    margin: 0;
+    @media (max-width: $screen-768){
+      font-size: 25px;
+    }
+    @media (max-width: $screen-480){
+      font-size: 15px;
+    } 
   }
 }
 

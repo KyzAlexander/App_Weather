@@ -10,6 +10,10 @@
   padding: 40px 20px;
   max-width: 400px;
   width: 100%;
+  @media (max-width: $screen-768){
+    margin-bottom: 10px;
+    max-width: 300px;
+  }  
   &__img {
     width: 110px;
     height: 110px;
@@ -35,6 +39,9 @@
       font-size: 70px;
       margin: 0px;
       color: #4793ff;
+      @media (max-width: $screen-480){
+        font-size: 55px;
+      }
     }
     .day {
       font-size: 20px;

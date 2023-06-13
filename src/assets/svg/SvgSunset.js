@@ -5,7 +5,7 @@ export const SvgSunset = () => {
       version="1.1"
       id="sunset"
       viewBox="0 0 188.0001 206.6289"
-      enable-background="new 0 0 188.0001 206.6289"
+      enableBackground="new 0 0 188.0001 206.6289"
       width="35"
       height="35"
     >
