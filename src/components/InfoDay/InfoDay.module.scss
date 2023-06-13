@@ -37,4 +37,28 @@
   }
 }
 
+.preloader {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;    
+  g * {    
+    animation-name: moving; // задает имя анимации
+    animation-duration: 3s; // задает длитильность анимации за один цикл
+    animation-iteration-count: infinite; // определяется сколько раз проигрывается цикл (infinite - бесконечно)
+    animation-timing-function: linear; // задает как происходит анимации в течении каждого цикла
+
+    // animation: moving 3s infinite linear; // или можно записать все ОДНОЙ СТРОКОЙ
+
+    transform-origin: center center; // указывает начало координат трансформации элемента    
+  }
+  @keyframes moving {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }  
+}
+
 

@@ -8,48 +8,64 @@ import HourlyForecast from "../HourlyForecast/HourlyForecast";
 import { fetchNextWeather } from "../../store/thunks/fetchNextWeather";
 
 import MapYandex from "../Map/Map";
+import { Preloader } from "../../assets/svg/preloader";
 
 const InfoDay = () => {
   const dispatch = useDispatch();
   const { lat, lon, city, isLoading } = useSelector(
     (state) => state.currentCitySliceReducer
   );
-  const { weather } = useSelector((state) => state.currentWeatherSliceReducer);
+  const { weather, isLoadingWeather } = useSelector(
+    (state) => state.currentWeatherSliceReducer
+  );
   useEffect(() => {
-    dispatch(fetchCurrentWeather(lat, lon));
+    if (lat && lon) {
+      dispatch(fetchCurrentWeather(lat, lon));
+    }
   }, [dispatch, lat, lon]);
 
-  const { weather_3_hour } = useSelector(
+  const { weather_3_hour, isLoadingNextWeather } = useSelector(
     (state) => state.nextWeatherSliceReducer
   );
   useEffect(() => {
-    dispatch(fetchNextWeather(lat, lon));
+    if (lat && lon) {
+      dispatch(fetchNextWeather(lat, lon));
+    }
   }, [dispatch, lat, lon]);
 
   return (
     <>
       {isLoading ? (
         <>
-          <div className={style.infoDay}>
-            <ThisDay weather={weather} city={city} />
-            <DetailsDay weather={weather} />
-          </div>
-          <div className={style.hourlyForecastWrapper}>
-            <p className={style.hourlyForecastWrapper__title}>
-              Трехчасовой прогноз
-            </p>
-            <div className={style.hourlyForecastWrapper__wrapper}>
-              {weather_3_hour.map((weather, index) => {
-                return <HourlyForecast weather={weather} key={index} />;
-              })}
+          {isLoadingWeather && isLoadingNextWeather ? (
+            <>
+              <div className={style.infoDay}>
+                <ThisDay weather={weather} city={city} />
+                <DetailsDay weather={weather} />
+              </div>
+
+              <div className={style.hourlyForecastWrapper}>
+                <p className={style.hourlyForecastWrapper__title}>
+                  Трехчасовой прогноз
+                </p>
+                <div className={style.hourlyForecastWrapper__wrapper}>
+                  {weather_3_hour.map((weather, index) => {
+                    return <HourlyForecast weather={weather} key={index} />;
+                  })}
+                </div>
+              </div>
+              <MapYandex lat={lat} lon={lon} />
+            </>
+          ) : (
+            <div className={style.preloader}>
+              <Preloader />
             </div>
-          </div>
-          <MapYandex lat={lat} lon={lon} />{" "}
+          )}
         </>
       ) : (
         <div className={style.wrapperloadingTitle}>
           <p className={style.wrapperloadingTitle__title}>
-            Введите свой город для просмотра прогноза погоды
+            Введите город для просмотра прогноза погоды
           </p>
         </div>
       )}

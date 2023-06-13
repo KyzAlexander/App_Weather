@@ -1,4 +1,4 @@
-export function Logo() {
+export const Logo = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -105,4 +105,4 @@ export function Logo() {
       </g>
     </svg>
   );
-}
+};

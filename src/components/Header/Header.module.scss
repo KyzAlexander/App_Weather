@@ -7,7 +7,7 @@
   align-items: center;
   margin-top: 5px;  
   &__title {
-    color: $light-title-header;
+    color: #f7dd4c;
   }
   &__changeTheme {
     margin-right: 10px;
@@ -27,11 +27,11 @@
       text-align: center;          
     }
     .searchInput:focus {
-      outline: 2px solid $light-title-header;
+      outline: 2px solid #f7dd4c;
     }
     .searchButton {      
       padding: 14px;
-      background-color: $light-title-header;
+      background-color: #f7dd4c;
       color: #000;
       border: none;      
       border-top-right-radius: 15px;  

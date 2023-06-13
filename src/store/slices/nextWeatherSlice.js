@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   weather_3_hour: [],
-  isLoading: false,
+  isLoadingNextWeather: false,
   response: {
     status: 0,
     massage: "",
@@ -14,21 +14,21 @@ export const nextWeatherSlice = createSlice({
   initialState,
   reducers: {
     fetchNextWeather(state) {
-      state.isLoading = true; // мутируем значение state
+      state.isLoadingNextWeather = true; // мутируем значение state
     },
     fetchNextWeatherSuccess(state, action) {
       state.weather_3_hour = action.payload.data.list;
-      state.isLoading = false;
+      state.isLoadingNextWeather = true;
       state.response = {
         status: action.payload.status,
-        massage: action.payload.statuseText,
+        massage: action.payload.statusText,
       };
     },
     fetchNextWeatherError(state, action) {
-      state.isLoading = false;
+      state.isLoadingNextWeather = false;
       state.response = {
         status: action.payload.status,
-        massage: action.payload.statuseText,
+        massage: action.payload.statusText,
       };
     },
   },

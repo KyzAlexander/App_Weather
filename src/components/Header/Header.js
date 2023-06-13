@@ -16,7 +16,9 @@ const Header = () => {
 
   const dispatch = useDispatch();
   const onSearch = () => {
-    dispatch(fetchCurrentCity(valueInput));
+    if (valueInput) {
+      dispatch(fetchCurrentCity(valueInput));
+    }
     setValueInput("");
   };
   const handleKeyPress = (event) => {

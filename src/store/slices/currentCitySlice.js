@@ -25,14 +25,14 @@ export const currentCitySlice = createSlice({
       state.isLoading = true;
       state.response = {
         status: action.payload.status,
-        massage: action.payload.statuseText,
+        massage: action.payload.statusText,
       };
     },
     fetchCurrentCityError(state, action) {
       state.isLoading = false;
       state.response = {
         status: action.payload.status,
-        massage: action.payload.statuseText,
+        massage: action.payload.statusText,
       };
     },
   },

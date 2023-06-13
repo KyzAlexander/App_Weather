@@ -3,16 +3,17 @@ import { currentCitySlice } from "../slices/currentCitySlice";
 
 export const fetchCurrentCity = (payload) => {
   return async (dispatch) => {
+    const res = await getCurrentCity(payload);
     try {
       dispatch(currentCitySlice.actions.fetchCurrentCity);
-      const res = await getCurrentCity(payload);
+
       if (res.status === 200) {
         dispatch(currentCitySlice.actions.fetchCurrentCitySuccess(res));
       } else {
         dispatch(currentCitySlice.actions.fetchCurrentCityError(res));
       }
     } catch (error) {
-      console.log(error);
+      dispatch(currentCitySlice.actions.fetchCurrentCityError(res));
     }
   };
 };
