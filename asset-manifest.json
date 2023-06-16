@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/KyzAlexander/App_Weather/static/css/main.4378d37d.css",
-    "main.js": "/KyzAlexander/App_Weather/static/js/main.6745e90e.js",
-    "index.html": "/KyzAlexander/App_Weather/index.html",
-    "main.4378d37d.css.map": "/KyzAlexander/App_Weather/static/css/main.4378d37d.css.map",
-    "main.6745e90e.js.map": "/KyzAlexander/App_Weather/static/js/main.6745e90e.js.map"
+    "main.css": "/App_Weather/static/css/main.4378d37d.css",
+    "main.js": "/App_Weather/static/js/main.6745e90e.js",
+    "index.html": "/App_Weather/index.html",
+    "main.4378d37d.css.map": "/App_Weather/static/css/main.4378d37d.css.map",
+    "main.6745e90e.js.map": "/App_Weather/static/js/main.6745e90e.js.map"
   },
   "entrypoints": [
     "static/css/main.4378d37d.css",
